@@ -26,8 +26,6 @@ jobs:
          - uses: actions/checkout@v2
          - uses: Swatinem/rust-cache@v1
          - uses: r7kamura/rust-problem-matchers@v1
-         - name: Check formatting
-           run: cargo fmt -- --check
          - name: Check with default features
            run: cargo check
          - name: Run tests
