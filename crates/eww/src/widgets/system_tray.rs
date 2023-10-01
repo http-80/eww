@@ -176,7 +176,7 @@ pub fn maintain_menubar(vbox: MenuBar, props: std::sync::Arc<SystemTrayProps>) {
             }
 
             for (address, notifier_item) in items.iter() {
-                // TODO bug in stray: they're parsed the wrong way around
+                // TODO bug in stray: they're parsved the wrong way around
                 if let Status::Active = notifier_item.item.status {
                     if props.active_only.load(std::sync::atomic::Ordering::SeqCst) {
                         continue // don't display; see documentation of Status
